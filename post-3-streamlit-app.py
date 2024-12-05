@@ -8,7 +8,8 @@ pages = {
     'Navigation': [
         st.Page('overview.py', title='Overview'),
         st.Page('over-the-decades.py', title='Over the Decades'),
-        st.Page('genre-analysis.py', title='Genre Analysis')
+        st.Page('genre-analysis.py', title='Genre Analysis'),
+        st.Page('correlation-analysis.py', title='Correlation Analysis')
     ],
 }
 

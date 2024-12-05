@@ -9,15 +9,18 @@ def load_movies_data():
 
 movies_df = load_movies_data()
 
-# Sidebar Checkboxes for Metrics
+# Page Title
+st.subheader('Genre Analysis')
+
+# Sidebar Checkboxes of User Input for Metrics
 st.sidebar.subheader('Genre Analysis Options')
-st.write('Select Metrics to Display the Top Genres by:')
+st.sidebar.write('Select Metrics to Display the Top Genres by:')
 show_average_box_office = st.sidebar.checkbox('Average Box Office', value=True) # Default checked
 show_average_imdb_rating = st.sidebar.checkbox('Average IMDB Rating', value=False)
 show_average_tomatometer = st.sidebar.checkbox('Average Rotten Tomatoes Tomatometer', value=False)
 show_average_metascore = st.sidebar.checkbox('Average Metacritic Metascore', value=False)
 
-# Sidebar Radio Buttons for the Number of Top Genres
+# Sidebar Radio Buttons of User Input for the Number of Top Genres
 top_n_genres = st.sidebar.radio(
     'Select the Number of Top Genres to Display:',
     options=[5, 10, 20],

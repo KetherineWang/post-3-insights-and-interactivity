@@ -10,13 +10,16 @@ def load_movies_data():
 
 movies_df = load_movies_data()
 
+# Page Title
+st.subheader('Over the Decades')
+
 # Calculate the Decade for Each Movie
 movies_df['Decade'] = (movies_df['Release Year'] // 10) * 10
 
 # Extract Unique Decades for the Slider
 decade_options = sorted(movies_df['Decade'].dropna().unique())
 
-# User Input for Decade Range
+# Sidebar Slider of User Input for Decade Range
 st.sidebar.subheader('Filter by Decade (Distribution of Top 250 IMDb Movies)')
 decade_range = st.sidebar.select_slider(
     'Select the Decade Range:',
